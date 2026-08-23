@@ -1,0 +1,22 @@
+name: Bump profnote cask
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+  repository_dispatch:
+    types: [profnote-release]
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bump cask to latest published release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/bump-profnote.sh
