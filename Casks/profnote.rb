@@ -1,6 +1,6 @@
 cask "profnote" do
-  version "0.3.7"
-  sha256 "c7fa4fc45b42896f7a0198c551d54ac587fd73fe788afe09d9928496f0555be1"
+  version "0.3.8"
+  sha256 "863d33193403c37373becd47e4b12fa95211a564437ca310271776f7414aad29"
 
   url "https://github.com/jeonjw85/profNote/releases/download/v#{version}/profNote_#{version}_aarch64.dmg",
       verified: "github.com/jeonjw85/profNote/"
